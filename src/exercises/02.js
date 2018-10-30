@@ -61,6 +61,7 @@ function Usage({
       {/* Static component - called compound components */}
       {/* These communicate with the parent to create by themselves are useless
       by together they're are very useful */}
+      {/* They shared implicit state with the parent */}
       <Toggle.On>The button is on</Toggle.On>
       <Toggle.Off>The button is off</Toggle.Off>
       <Toggle.Button />

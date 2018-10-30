@@ -88,12 +88,11 @@ class Toggle extends React.Component {
         // every time this value changes is gonna re-render itself and all
         // consumers
         // could be a potential performance problem
+        // every time this render method is called, it will create a new
+        // object for the value and its gonna re-render all the consumers
 
-        // value = {this.state}
-        value={{
-          on,
-          toggle,
-        }}
+        // value = {this.state} correct way for performance
+        value={this.state}
       >
         {this.props.children}
       </ToggleContext.Provider>

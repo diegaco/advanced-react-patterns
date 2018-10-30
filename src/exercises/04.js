@@ -5,6 +5,10 @@ import {Switch} from '../switch'
 
 // we're back to basics here. Rather than compound components,
 // let's use a render prop!
+
+// The render responsability is now under the ownership of the user
+// and not the component implementation.
+
 class Toggle extends React.Component {
   state = {on: false}
   toggle = () =>
@@ -14,14 +18,20 @@ class Toggle extends React.Component {
         this.props.onToggle(this.state.on)
       },
     )
+
+  getStateAndHelpers() {
+    return {
+      on: this.state.on,
+      toggle: this.toggle,
+    }
+  }
+
   render() {
-    const {on} = this.state
-    // We want to give rendering flexibility, so we'll be making
-    // a change to our render prop component here.
-    // You'll notice the children prop in the Usage component
-    // is a function. 🐨 So you can replace this with a call this.props.children()
-    // But you'll need to pass it an object with `on` and `toggle`.
-    return <Switch on={on} onClick={this.toggle} />
+    // children is the implicit props between the opening and closing JSX tag
+    return this.props.children({
+      on: this.state.on,
+      toggle: this.toggle,
+    })
   }
 }
 

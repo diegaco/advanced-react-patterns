@@ -1,27 +1,14 @@
 # Advanced React Patterns v2
 
-👋 hi there! My name is [Kent C. Dodds](https://kentcdodds.com)! This is a
-workshop repo to teach you about using React Component Patterns to make your
+This is a workshop repo about using React Component Patterns to make your
 react components more useful and reusable without sacrificing simplicity.
-
-[![chat-badge][chat-badge]][chat]
-[![Build Status][build-badge]][build]
-[![AppVeyor Build Status][win-build-badge]][win-build]
-[![Code Coverage][coverage-badge]][coverage]
-[![MIT License][license-badge]][license]
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
-
-[![PRs Welcome][prs-badge]][prs]
-[![Code of Conduct][coc-badge]][coc]
-[![Watch on GitHub][github-watch-badge]][github-watch]
-[![Star on GitHub][github-star-badge]][github-star]
-[![Tweet][twitter-badge]][twitter]
+By [Kent C. Dodds](https://kentcdodds.com)!
 
 ## System Requirements
 
-* [git][git] v2.14.1 or greater
-* [NodeJS][node] v8.9.4 or greater
-* [npm][npm] v5.6.0 or greater
+- [git][git] v2.14.1 or greater
+- [NodeJS][node] v8.9.4 or greater
+- [npm][npm] v5.6.0 or greater
 
 All of these must be available in your `PATH`. To verify things are set up
 properly, you can run this:
@@ -123,56 +110,3 @@ error message you get. If you still can't work it out, feel free to
 help if I can.
 
 </details>
-
-## Contributors
-
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-
-<!-- prettier-ignore -->
-| [<img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;"/><br /><sub><b>Kent C. Dodds</b></sub>](https://kentcdodds.com)<br />[💻](https://github.com/kentcdodds/advanced-component-patterns-v2/commits?author=kentcdodds "Code") [📖](https://github.com/kentcdodds/advanced-component-patterns-v2/commits?author=kentcdodds "Documentation") [🚇](#infra-kentcdodds "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/kentcdodds/advanced-component-patterns-v2/commits?author=kentcdodds "Tests") | [<img src="https://avatars0.githubusercontent.com/u/1250430?v=4" width="100px;"/><br /><sub><b>FWeinb</b></sub>](https://github.com/FWeinb)<br />[🐛](https://github.com/kentcdodds/advanced-component-patterns-v2/issues?q=author%3AFWeinb "Bug reports") [🤔](#ideas-FWeinb "Ideas, Planning, & Feedback") | [<img src="https://avatars2.githubusercontent.com/u/1383720?v=4" width="100px;"/><br /><sub><b>David Lannoye</b></sub>](https://github.com/dlannoye)<br />[🐛](https://github.com/kentcdodds/advanced-component-patterns-v2/issues?q=author%3Adlannoye "Bug reports") [📖](https://github.com/kentcdodds/advanced-component-patterns-v2/commits?author=dlannoye "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/9815009?s=460&v=4" width="100px;"/><br /><sub><b>Colin Cummings</b></sub>](https://github.com/colinrcummings)<br />[💻](https://github.com/kentcdodds/advanced-component-patterns-v2/commits?author=colinrcummings "Code") [⚠️](https://github.com/kentcdodds/advanced-component-patterns-v2/commits?author=colinrcummings "Tests") | [<img src="https://avatars2.githubusercontent.com/u/464764?v=4" width="100px;"/><br /><sub><b>Benji Koltai</b></sub>](https://github.com/bkoltai)<br />[📖](https://github.com/kentcdodds/advanced-component-patterns-v2/commits?author=bkoltai "Documentation") |
-| :---: | :---: | :---: | :---: | :---: |
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
-
-## License
-
-This material is available for private, non-commercial use under the
-[GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html). If you
-would like to use this material to conduct your own workshop, please contact me
-at kent@doddsfamily.us
-
-[npm]: https://www.npmjs.com/
-[node]: https://nodejs.org
-[git]: https://git-scm.com/
-[chat]: https://gitter.im/kentcdodds/advanced-react-patterns-v2
-[chat-badge]: https://img.shields.io/gitter/room/kentcdodds/advanced-react-patterns-v2.js.svg?style=flat-square&logo=gitter-white
-[build-badge]: https://img.shields.io/travis/kentcdodds/advanced-react-patterns-v2.svg?style=flat-square&logo=travis
-[build]: https://travis-ci.org/kentcdodds/advanced-react-patterns-v2
-[license-badge]: https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
-[license]: https://github.com/kentcdodds/advanced-react-patterns-v2/blob/master/README.md#license
-[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
-[prs]: http://makeapullrequest.com
-[donate-badge]: https://img.shields.io/badge/$-support-green.svg?style=flat-square
-[donate]: http://kcd.im/donate
-[coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
-[coc]: https://github.com/kentcdodds/advanced-react-patterns-v2/blob/master/CODE_OF_CONDUCT.md
-[github-watch-badge]: https://img.shields.io/github/watchers/kentcdodds/advanced-react-patterns-v2.svg?style=social
-[github-watch]: https://github.com/kentcdodds/advanced-react-patterns-v2/watchers
-[github-star-badge]: https://img.shields.io/github/stars/kentcdodds/advanced-react-patterns-v2.svg?style=social
-[github-star]: https://github.com/kentcdodds/advanced-react-patterns-v2/stargazers
-[twitter]: https://twitter.com/intent/tweet?text=Check%20out%20advanced-react-patterns-v2%20by%20@kentcdodds%20https://github.com/kentcdodds/advanced-react-patterns-v2%20%F0%9F%91%8D
-[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/kentcdodds/advanced-react-patterns-v2.svg?style=social
-[emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
-[all-contributors]: https://github.com/kentcdodds/all-contributors
-[win-path]: https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/
-[mac-path]: http://stackoverflow.com/a/24322978/971592
-[issue]: https://github.com/kentcdodds/advanced-react-patterns-v2/issues/new
-[win-build-badge]: https://img.shields.io/appveyor/ci/kentcdodds/advanced-react-patterns-v2.svg?style=flat-square&logo=appveyor
-[win-build]: https://ci.appveyor.com/project/kentcdodds/advanced-react-patterns-v2
-[coverage-badge]: https://img.shields.io/codecov/c/github/kentcdodds/advanced-react-patterns-v2.svg?style=flat-square
-[coverage]: https://codecov.io/github/kentcdodds/advanced-react-patterns-v2
-[watchman]: https://facebook.github.io/watchman/docs/install.html

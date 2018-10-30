@@ -21,7 +21,9 @@ class Toggle extends React.Component {
       // if you need to reference current states then use an updater function
       // otherwise use an Object
       // https://reactjs.org/docs/state-and-lifecycle.html#state-updates-may-be-asynchronous
+      // Updater function that takes the previous state
       prevState => ({on: !prevState.on}),
+      // Callback optional parameter to execute after setState is update
       () => {
         this.props.onToggle(this.state.on)
       },

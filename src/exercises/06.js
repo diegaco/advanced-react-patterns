@@ -13,7 +13,11 @@ import {Switch} from '../switch'
 // with the ones we need to get our toggle functionality to work
 //
 // 💰 Here's a little utility that might come in handy
-// const callAll = (...fns) => (...args) => fns.forEach(fn => fn && fn(...args))
+// accepts any number of functions and returns a function
+// that takes any number of args and forEach of the
+// function is going to call it if it exists with all those args
+const callAll = (...fns) => (...args) =>
+  fns.forEach(fn => fn && fn(...args))
 
 class Toggle extends React.Component {
   state = {on: false}
@@ -22,14 +26,25 @@ class Toggle extends React.Component {
       ({on}) => ({on: !on}),
       () => this.props.onToggle(this.state.on),
     )
+
+  getTogglerProps = ({onClick, ...props}) => ({
+    'aria-expanded': this.state.on,
+    onClick: callAll(this.toggle, onClick),
+    // This is the long solution, the top is the more fancy
+    // in case we have to write a lot of these methods we can use
+    // the callAll utility
+    // onClick: (...args) => {
+    //   onClick && onClick(...args)
+    //   this.toggle()
+    // },
+    ...props,
+  })
+
   getStateAndHelpers() {
     return {
       on: this.state.on,
       toggle: this.toggle,
-      togglerProps: {
-        'aria-expanded': this.state.on,
-        onClick: this.toggle,
-      },
+      getTogglerProps: this.getTogglerProps,
     }
   }
   render() {
@@ -42,7 +57,7 @@ class Toggle extends React.Component {
 // You can make all the tests pass by updating the Toggle component.
 function Usage({
   onToggle = (...args) => console.log('onToggle', ...args),
-  onButtonClick = () => console.log('onButtonClick'),
+  onButtonClick = () => console.log('onButtonClick haha'),
 }) {
   return (
     <Toggle onToggle={onToggle}>
@@ -55,6 +70,7 @@ function Usage({
               'aria-label': 'custom-button',
               onClick: onButtonClick,
               id: 'custom-button-id',
+              'data-prop': 'otra prop cualquiera',
             })}
           >
             {on ? 'on' : 'off'}

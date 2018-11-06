@@ -1,5 +1,9 @@
 // render props
 
+// This pattern is useful when a component needs that very fine
+// detail on and control over how things are rendered.
+// There is no lower level pattern than render props to share logic
+
 import React from 'react'
 import {Switch} from '../switch'
 
@@ -19,16 +23,16 @@ class Toggle extends React.Component {
       },
     )
 
-  getStateAndHelpers() {
-    return {
-      on: this.state.on,
-      toggle: this.toggle,
-    }
-  }
-
   render() {
     // children is the implicit props between the opening and closing JSX tag
-    return this.props.children({
+    // This is how Context API use this with props.children
+    // return this.props.children({
+    //   on: this.state.on,
+    //   toggle: this.toggle
+    // });
+    // In this case I called the prop render but it could have
+    // any name
+    return this.props.render({
       on: this.state.on,
       toggle: this.toggle,
     })
@@ -42,8 +46,9 @@ function Usage({
   onToggle = (...args) => console.log('onToggle', ...args),
 }) {
   return (
-    <Toggle onToggle={onToggle}>
-      {({on, toggle}) => (
+    <Toggle
+      onToggle={onToggle}
+      render={({on, toggle}) => (
         <div>
           {on ? 'The button is on' : 'The button is off'}
           <Switch on={on} onClick={toggle} />
@@ -53,7 +58,7 @@ function Usage({
           </button>
         </div>
       )}
-    </Toggle>
+    />
   )
 }
 Usage.title = 'Render Props'

@@ -1,5 +1,10 @@
 // Flexible Compound Components with context
 
+// An accordion would be a good example of implementing this pattern
+// the user dont have to know about the state that's been shared
+// between parent and children
+// An implicit state is shared between the parent and children
+
 import React from 'react'
 import {Switch} from '../switch'
 
